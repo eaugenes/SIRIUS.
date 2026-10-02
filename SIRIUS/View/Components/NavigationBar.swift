@@ -9,12 +9,12 @@ import SwiftUI
 
 struct NavigationBar: View {
     
-    @Binding var selectedTab: NavigationTab
+    @Binding var selectedTab: AplNavigationTab
     @Namespace private var animation
     
     var body: some View {
         HStack(spacing: 8) {
-            ForEach(NavigationTab.allCases, id: \.self) { tab in
+            ForEach(AplNavigationTab.allCases, id: \.self) { tab in
                 let isActive = selectedTab == tab
                 
                 Button {

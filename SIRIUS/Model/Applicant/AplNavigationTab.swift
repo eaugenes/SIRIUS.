@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum NavigationTab: String, CaseIterable, Identifiable{
+enum AplNavigationTab: String, CaseIterable, Identifiable{
     case home = "Home"
     case jobs = "Jobs"
     case applications = "Applications"

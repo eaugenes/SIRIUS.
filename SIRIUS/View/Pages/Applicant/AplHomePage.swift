@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AplHomePage: View {
     
-    @StateObject private var controller = ApplicationsController()
+    @StateObject private var controller = AplApplicationsController()
     
     var body: some View {
         ScrollView {

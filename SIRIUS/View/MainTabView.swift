@@ -9,31 +9,31 @@ import SwiftUI
 
 struct MainTabView: View{
     
-    @State private var selectedTab: NavigationTab = .home
+    @State private var selectedTab: AplNavigationTab = .home
     
     var body: some View {
         ZStack(alignment: .bottom){
             TabView(selection: $selectedTab) {
                 AplHomePage()
-                    .tag(NavigationTab.home)
+                    .tag(AplNavigationTab.home)
                     .toolbar(.hidden, for: .tabBar)
                 
                 JobDiscoveryPage()
-                    .tag(NavigationTab.jobs)
+                    .tag(AplNavigationTab.jobs)
                     .toolbar(.hidden, for: .tabBar)
                 
                 ApplicationStatusPage()
-                    .tag(NavigationTab.applications)
+                    .tag(AplNavigationTab.applications)
                     .toolbar(.hidden, for: .tabBar)
                 
                 AplAccountPage()
-                    .tag(NavigationTab.profile)
+                    .tag(AplNavigationTab.profile)
                     .toolbar(.hidden, for: .tabBar)
             }
             .navigationBarBackButtonHidden(true)
             
             NavigationBar(selectedTab: $selectedTab)
-                .padding(.bottom, 10)
+                .padding(10)
         }
         .ignoresSafeArea(.keyboard)     // to overlay components in the screen when keyboard is on
     }

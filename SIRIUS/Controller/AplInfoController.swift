@@ -9,7 +9,7 @@ import Foundation
 import Combine          // for ObservableObject and @Published
 import UIKit            // UIImage()
 
-class ApplicantController: ObservableObject{
+class AplInfoController: ObservableObject{
     
     @Published var applicant: Applicant
     

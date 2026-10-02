@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AplSignUpPage: View {
     
-    @StateObject private var applicantController = ApplicantController(
+    @StateObject private var applicantController = AplInfoController(
         applicant: Applicant(
            firstName: "", middleName: "", lastName: "", contactNumber: "", location: "", program: "", yrExp: 0.0, coreLang: [""], workSetUp: "", email: "", password: ""
         )

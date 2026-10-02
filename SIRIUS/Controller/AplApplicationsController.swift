@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class ApplicationsController: ObservableObject {
+class AplApplicationsController: ObservableObject {
     @Published var selectedStatus: ApplicationStatus = .all
     
     private var allApplications: [JobApplication] = [
