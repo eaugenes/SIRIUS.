@@ -40,7 +40,7 @@ struct JobDiscoveryPage: View {
                         Button{
                             jobDetailsScreen = true
                         } label: {
-                            JobCard(
+                            AplJobCard(
                                 jobTitle: "Junior Software Developer",
                                 companyName: "OpeniT Philippines, Inc.",
                                 jobLocation: "Lucena City",
@@ -50,7 +50,7 @@ struct JobDiscoveryPage: View {
                             .padding(.bottom, 8)
                         }
                         
-                        JobCard(
+                        AplJobCard(
                             jobTitle: "UI/UX Designer",
                             companyName: "DEF Company",
                             jobLocation: "Tagaytay City",
@@ -59,7 +59,7 @@ struct JobDiscoveryPage: View {
                         )
                         .padding(.bottom, 8)
                         
-                        JobCard(
+                        AplJobCard(
                             jobTitle: "UI/UX Designer",
                             companyName: "XYZ Company",
                             jobLocation: "Calamba City",
@@ -68,7 +68,7 @@ struct JobDiscoveryPage: View {
                         )
                         .padding(.bottom, 8)
                         
-                        JobCard(
+                        AplJobCard(
                             jobTitle: "UI/UX Designer",
                             companyName: "Shangrila The Fort",
                             jobLocation: "Lucena City",
@@ -77,7 +77,7 @@ struct JobDiscoveryPage: View {
                         )
                         .padding(.bottom, 8)
                         
-                        JobCard(
+                        AplJobCard(
                             jobTitle: "UI/UX Designer",
                             companyName: "XYZ Company",
                             jobLocation: "Calamba City",
@@ -86,7 +86,7 @@ struct JobDiscoveryPage: View {
                         )
                         .padding(.bottom, 8)
                         
-                        JobCard(
+                        AplJobCard(
                             jobTitle: "UI/UX Designer",
                             companyName: "XYZ Company",
                             jobLocation: "Calamba City",
@@ -95,7 +95,7 @@ struct JobDiscoveryPage: View {
                         )
                         .padding(.bottom, 8)
                         
-                        JobCard(
+                        AplJobCard(
                             jobTitle: "UI/UX Designer",
                             companyName: "DEF Company",
                             jobLocation: "Tagaytay City",

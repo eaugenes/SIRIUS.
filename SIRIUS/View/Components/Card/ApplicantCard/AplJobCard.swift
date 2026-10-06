@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct JobCard: View {
+struct AplJobCard: View {
     var jobTitle: String
     var companyName: String
     var jobLocation: String
@@ -81,7 +81,7 @@ struct JobCard: View {
 }
 
 #Preview{
-    JobCard(
+    AplJobCard(
         jobTitle: "Junior Software Developer",
         companyName: "OpeniT Philippines, Inc.",
         jobLocation: "San Juan City, Metro Manila",

@@ -1,5 +1,5 @@
 //
-//  EmployerApplicantStatus.swift
+//  EmployerAplStatus.swift
 //  SIRIUS
 //
 //  Created by Mac-LAB on 10/2/26.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum EmployerApplicantStatus: String, CaseIterable, Identifiable {
+enum EmpAplStatus: String, CaseIterable, Identifiable {
     case toReview = "To Review"
     case interview = "Interview"
     case hired = "Hired"
@@ -15,7 +15,7 @@ enum EmployerApplicantStatus: String, CaseIterable, Identifiable {
     var id: String { self.rawValue }
 }
 
-enum EmployerApplicantFilter: String, CaseIterable, Identifiable {
+enum EmpApplicantFilter: String, CaseIterable, Identifiable {
     case all = "All"
     case toReview = "To Review"
     case interview = "Interview"
@@ -24,7 +24,7 @@ enum EmployerApplicantFilter: String, CaseIterable, Identifiable {
     var id: String { self.rawValue }
     
     
-    var status: EmployerApplicantStatus? {
+    var status: EmpAplStatus? {
         switch self {
         case .all: return nil
         case .toReview: return .toReview
@@ -35,12 +35,12 @@ enum EmployerApplicantFilter: String, CaseIterable, Identifiable {
 }
 
 
-struct EmployerApplicant: Identifiable, Equatable {
+struct EmpApplicant: Identifiable, Equatable {
     let id = UUID()
     var name: String
     var degree: String
     var yearsExperience: Int
     var coreLanguages: [String]
     var matchPercentage: Int
-    var status: EmployerApplicantStatus = .toReview
+    var status: EmpAplStatus = .toReview
 }

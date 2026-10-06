@@ -13,6 +13,7 @@ struct AppTextField: View {
     let placeholder: String
     @Binding var text: String
     var isSecure: Bool = false          // for SecureField
+    var isMultiline: Bool = false       // for multi-line text (e.g. Description/s)
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -22,7 +23,30 @@ struct AppTextField: View {
                 .foregroundStyle(Color.black)
                 .padding(2)
             
-            if isSecure {           // For Password
+            if isMultiline {
+                ZStack(alignment: .topLeading){
+                    TextEditor(text: $text)
+                        .scrollContentBackground(.hidden)
+                        .font(.system(size: 12))
+                        .foregroundStyle(Color.black)
+                        .padding(6)
+                    if text.isEmpty {
+                        Text(placeholder)
+                            .font(.system(size: 12))
+                            .foregroundStyle(Color.gray)
+                            .padding(.horizontal, 11)
+                            .padding(.vertical, 14)
+                            .allowsHitTesting(true)
+                    }
+                }
+                .frame(width: 300, height: 100)
+                .background(Color.white)
+                .cornerRadius(10)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .strokeBorder(Color.gray, lineWidth: 1)
+                )
+            } else if isSecure {           // For Password
                 SecureField(placeholder, text: $text)
                     .font(.system(size: 12))
                     .padding(10)

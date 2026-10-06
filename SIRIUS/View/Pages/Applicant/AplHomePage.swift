@@ -44,7 +44,7 @@ struct AplHomePage: View {
                     .foregroundStyle(.white)
                     .padding(.horizontal, 10)
                 
-                JobCard(
+                AplJobCard(
                     jobTitle: "Junior Software Developer",
                     companyName: "OpeniT Philippines, Inc.",
                     jobLocation: "Lucena City",

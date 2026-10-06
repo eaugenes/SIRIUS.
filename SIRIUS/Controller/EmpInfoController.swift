@@ -13,14 +13,14 @@ final class EmpInfoController: ObservableObject {
     
     @Published var employer: Employer
     @Published var company: Company
-    @Published var recentActivity: [EmployerActivity]
+    @Published var recentActivity: [EmpActivity]
     @Published var isRegistered: Bool = false
     @Published var signUpError: String?
     
     init(
         employer: Employer = Employer(),
         company: Company = Company(),
-        recentActivity: [EmployerActivity] = EmpInfoController.sampleActivity
+        recentActivity: [EmpActivity] = EmpInfoController.sampleActivity
     ) {
         self.employer = employer
         self.company = company
@@ -69,12 +69,12 @@ final class EmpInfoController: ObservableObject {
     
     // MARK: - Sample data
     
-    static let sampleActivity: [EmployerActivity] = [
-        EmployerActivity(icon: "person.2", title: "2 New Applicants", jobPosition: "Junior Software Developer", timeAgo: "2 hours ago"),
-        EmployerActivity(icon: "briefcase", title: "3 Hire Left", jobPosition: "UI/UX Designer", timeAgo: "5 hours ago"),
-        EmployerActivity(icon: "person.2", title: "5 New Applicants", jobPosition: "UI/UX Designer", timeAgo: "9 hours ago"),
-        EmployerActivity(icon: "person.2", title: "8 New Applicants", jobPosition: "UI/UX Designer", timeAgo: "1 day ago"),
-        EmployerActivity(icon: "briefcase", title: "1 Hire Left", jobPosition: "UI/UX Designer", timeAgo: "2 days ago")
+    static let sampleActivity: [EmpActivity] = [
+        EmpActivity(icon: "person.2", title: "2 New Applicants", jobPosition: "Junior Software Developer", timeAgo: "2 hours ago"),
+        EmpActivity(icon: "briefcase", title: "3 Hire Left", jobPosition: "UI/UX Designer", timeAgo: "5 hours ago"),
+        EmpActivity(icon: "person.2", title: "5 New Applicants", jobPosition: "UI/UX Designer", timeAgo: "9 hours ago"),
+        EmpActivity(icon: "person.2", title: "8 New Applicants", jobPosition: "UI/UX Designer", timeAgo: "1 day ago"),
+        EmpActivity(icon: "briefcase", title: "1 Hire Left", jobPosition: "UI/UX Designer", timeAgo: "2 days ago")
     ]
     
     // Pre-filled controller for previews
